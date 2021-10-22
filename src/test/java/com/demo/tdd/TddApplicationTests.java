@@ -29,6 +29,7 @@ public class TddApplicationTests {
 		ResponseEntity<Car> response = restTemplate.getForEntity("/cars/prius",
 				Car.class);
 
+		
 		// assert
 		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
 		assertThat(response.getBody().getName()).isEqualTo("prius");
